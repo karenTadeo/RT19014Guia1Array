@@ -1,0 +1,38 @@
+
+package com.mycompany.rt1901guia1array;
+
+
+public class Ejercicio6 {
+     public static void main(String[] args) {
+        String[] nombresPokemonA = {
+            "Pikachu", "Charizard", "Bulbasaur", "Squirtle", "Jigglypuff",
+            "Eevee", "Mewtwo", "Snorlax", "Gengar", "Machamp"
+        };
+
+        String[] nombresPokemonB = {
+            "Venusaur", "Blastoise", "Dragonite", "Gyarados", "Alakazam"
+        };
+
+        String[] nombresPokemonC = new String[nombresPokemonA.length + nombresPokemonB.length];
+
+        int indiceA = 0;
+        int indiceB = 0;
+
+        for (int i = 0; i < nombresPokemonC.length; i++) {
+           
+            if (i % 2 == 0 && indiceA < nombresPokemonA.length) {
+                nombresPokemonC[i] = nombresPokemonA[indiceA];
+                indiceA++;
+            } else if (indiceB < nombresPokemonB.length) {
+                nombresPokemonC[i] = nombresPokemonB[indiceB];
+                indiceB++;
+            }
+        }
+
+        System.out.println("Nombres de Pokémon en orden mezclado:");
+        for (String nombre : nombresPokemonC) {
+            System.out.println(nombre);
+        }
+    }
+
+}

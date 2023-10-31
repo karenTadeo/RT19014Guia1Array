@@ -1,0 +1,38 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+       public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[10];
+
+        System.out.println("Introduce 10 números enteros:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        boolean ordenCreciente = true;
+        boolean ordenDecreciente = true;
+
+        for (int i = 1; i < 10; i++) {
+            if (numeros[i] > numeros[i - 1]) {
+                ordenDecreciente = false;
+            } else if (numeros[i] < numeros[i - 1]) {
+                ordenCreciente = false;
+            }
+        }
+
+        if (ordenCreciente && ordenDecreciente) {
+            System.out.println("La serie está desordenada.");
+        } else if (ordenCreciente) {
+            System.out.println("La serie está ordenada de forma creciente.");
+        } else if (ordenDecreciente) {
+            System.out.println("La serie está ordenada de forma decreciente.");
+        } else {
+            System.out.println("Todos los números son idénticos.");
+        }
+    }
+ 
+}

@@ -1,0 +1,23 @@
+
+package com.mycompany.rt1901guia1array;
+
+public class Ejercicio16 {
+    public static void main(String[] args) {
+        String[] nombresPokemon = {"pikachu", "charizard", "bulbasaur", "squirtle", "jigglypuff"};
+        int[] poderesPokemon = {100, 150, 80, 90, 120};
+
+        int indiceMaximoPoder = 0;
+
+        for (int i = 1; i < poderesPokemon.length; i++) {
+            if (poderesPokemon[i] > poderesPokemon[indiceMaximoPoder]) {
+                indiceMaximoPoder = i;
+            }
+        }
+
+        String nombrePokemonConMayorPoder = nombresPokemon[indiceMaximoPoder];
+        int mayorPoder = poderesPokemon[indiceMaximoPoder];
+
+        System.out.println("El Pokémon con el mayor poder es " + nombrePokemonConMayorPoder + " con " + mayorPoder + " de poder.");
+    }
+}
+

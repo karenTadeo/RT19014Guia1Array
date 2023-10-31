@@ -1,0 +1,21 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class ejercicio4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] nombresPokemon = new String[5];
+        
+        System.out.println("Introduce 5 nombres de Pokémon:");
+        for (int i = 0; i < 5; i++) {
+            nombresPokemon[i] = scanner.next();
+        }
+        
+        System.out.println("Nombres de Pokémon en orden inverso:");
+        for (int i = 4; i >= 0; i--) {
+            System.out.println(nombresPokemon[i]);
+        }
+    }
+}

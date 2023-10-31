@@ -1,0 +1,31 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.HashSet;
+
+public class Ejercicio24 {
+    public static void main(String[] args) {
+        int[] arrayOriginal = {1, 2, 2, 3, 4, 4, 5};
+        
+               HashSet<Integer> set = new HashSet<>();
+
+        for (int numero : arrayOriginal) {
+            set.add(numero);
+        }
+
+       
+        int[] arraySinDuplicados = new int[set.size()];
+        int indice = 0;
+
+        for (int numero : set) {
+            arraySinDuplicados[indice] = numero;
+            indice++;
+        }
+
+        
+        for (int numero : arraySinDuplicados) {
+            System.out.print(numero + " ");
+        }
+    }
+}
+

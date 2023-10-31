@@ -1,0 +1,34 @@
+
+package com.mycompany.rt1901guia1array;
+
+
+public class Ejercicio14 {
+       public static void main(String[] args) {
+        int[] numerosDesordenados = {64, 25, 12, 22, 11, 1, 77, 36, 98, 45};
+
+        bubbleSortAscendente(numerosDesordenados);
+
+        System.out.println("Orden ascendente:");
+        for (int num : numerosDesordenados) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void bubbleSortAscendente(int[] arr) {
+        int n = arr.length;
+        boolean intercambiado;
+        do {
+            intercambiado = false;
+            for (int i = 1; i < n; i++) {
+                if (arr[i - 1] > arr[i]) {
+                    int temp = arr[i - 1];
+                    arr[i - 1] = arr[i];
+                    arr[i] = temp;
+                    intercambiado = true;
+                }
+            }
+        } while (intercambiado);
+    
+}
+}
+

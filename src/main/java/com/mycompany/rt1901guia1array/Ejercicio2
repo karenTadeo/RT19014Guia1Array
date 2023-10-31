@@ -1,0 +1,35 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+        int sumaPositivos = 0, sumaNegativos = 0, numCeros = 0;
+        
+        System.out.println("Introduce 5 números:");
+        for (int i = 0; i < 5; i++) {
+            numeros[i] = scanner.nextInt();
+            if (numeros[i] > 0) {
+                sumaPositivos += numeros[i];
+            } else if (numeros[i] < 0) {
+                sumaNegativos += numeros[i];
+            } else {
+                numCeros++;
+            }
+        }
+        
+        if (sumaPositivos != 0) {
+            double mediaPositivos = (double) sumaPositivos / 5;
+            System.out.println("Media de los números positivos: " + mediaPositivos);
+        }
+        if (sumaNegativos != 0) {
+            double mediaNegativos = (double) sumaNegativos / 5;
+            System.out.println("Media de los números negativos: " + mediaNegativos);
+        }
+        System.out.println("Número de ceros: " + numCeros);   
+     }
+}
+

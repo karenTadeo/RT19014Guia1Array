@@ -1,0 +1,42 @@
+
+package com.mycompany.rt1901guia1array;
+
+public class Ejercicio19 {
+   public static void main(String[] args) {
+        int[][] matriz = {
+            {1, 2, 3, 4},
+            {2, 5, 6, 7},
+            {3, 6, 8, 9},
+            {4, 7, 9, 10}
+        };
+
+        int filas = matriz.length;
+        int columnas = matriz[0].length;
+       boolean esSimétrica = false;
+
+       
+
+        if (filas != columnas) {
+        } else {
+            for (int i = 0; i < filas; i++) {
+                for (int j = 0; j < columnas; j++) {
+                    if (matriz[i][j] != matriz[j][i]) {
+                        esSimétrica = false;
+                        break;
+                    }
+                }
+                if (!esSimétrica) {
+                    break;
+                }
+            }
+        }
+
+        
+        if (esSimétrica) {
+            System.out.println("La matriz es simétrica.");
+        } else {
+            System.out.println("La matriz no es simétrica.");
+        }
+    }
+ 
+}

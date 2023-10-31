@@ -1,0 +1,22 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+        
+        System.out.println("Introduce 5 números:");
+        for (int i = 0; i < 5; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+        
+        System.out.println("Números introducidos en el mismo orden:");
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+    }
+}
+

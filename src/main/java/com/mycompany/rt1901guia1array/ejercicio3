@@ -1,0 +1,22 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+       public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[10];
+        
+        System.out.println("Introduce 10 números:");
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+        
+        System.out.println("Números en el orden especificado:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(numeros[i] + ", " + numeros[9 - i]);
+        }
+    }
+}
+

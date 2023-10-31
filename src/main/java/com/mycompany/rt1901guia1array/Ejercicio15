@@ -1,0 +1,34 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class Ejercicio15 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] nombresPokemon = {"pikachu", "charizard", "bulbasaur", "squirtle", "jigglypuff"};
+        int[] poderesPokemon = {100, 150, 80, 90, 120};
+
+        System.out.print("Introduce el nombre del Pokémon: ");
+        String nombrePokemonBuscado = scanner.nextLine().toLowerCase(); 
+        int indiceEncontrado = -1;
+        for (int i = 0; i < nombresPokemon.length; i++) {
+            if (nombresPokemon[i].equalsIgnoreCase(nombrePokemonBuscado)) {
+                indiceEncontrado = i;
+                break;
+            }
+        }
+
+        if (indiceEncontrado != -1) {
+            System.out.println("El Pokémon " + nombresPokemon[indiceEncontrado] + " se encuentra en el array.");
+            System.out.print("Introduce la nueva cantidad de poder: ");
+            int nuevaCantidadPoder = scanner.nextInt();
+            poderesPokemon[indiceEncontrado] = nuevaCantidadPoder;
+            System.out.println("El poder de " + nombresPokemon[indiceEncontrado] + " ha sido actualizado a " + nuevaCantidadPoder + ".");
+        } else {
+            System.out.println("El Pokémon " + nombrePokemonBuscado + " no se encuentra en el array.");
+        }
+    }
+}
+

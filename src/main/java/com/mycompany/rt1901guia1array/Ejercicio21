@@ -1,0 +1,33 @@
+
+package com.mycompany.rt1901guia1array;
+
+public class Ejercicio21 {
+     public static void main(String[] args) {
+        int[] arrayOriginal = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+       
+        int[] arrayInvertido = new int[arrayOriginal.length];
+
+       
+        for (int i = 0; i < arrayOriginal.length; i++) {
+            arrayInvertido[i] = arrayOriginal[arrayOriginal.length - 1 - i];
+        }
+
+       
+        System.out.println("Array Original:");
+        mostrarArray(arrayOriginal);
+
+       
+        System.out.println("Array Invertido:");
+        mostrarArray(arrayInvertido);
+    }
+
+   
+    public static void mostrarArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println(); 
+    }
+}
+

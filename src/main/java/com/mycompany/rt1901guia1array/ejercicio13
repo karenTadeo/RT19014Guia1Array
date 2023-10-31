@@ -1,0 +1,26 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class ejercicio13 {
+   public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] nombresPokemonB = {
+            "Venusaur", "Blastoise", "Dragonite", "Gyarados", "Alakazam",
+            "Arcanine", "Lapras", "Golem", "Gyarados", "Rhydon"
+        };
+
+        System.out.print("Introduce un número (índice) entre 0 y " + (nombresPokemonB.length - 1) + ": ");
+        int indiceUsuario = scanner.nextInt();
+
+        if (indiceUsuario >= 0 && indiceUsuario < nombresPokemonB.length) {
+            String pokemonEnIndice = nombresPokemonB[indiceUsuario];
+            System.out.println("El Pokémon en el índice " + indiceUsuario + " es " + pokemonEnIndice);
+        } else {
+            System.out.println("El índice está fuera del rango del array.");
+        }
+    }
+ 
+}

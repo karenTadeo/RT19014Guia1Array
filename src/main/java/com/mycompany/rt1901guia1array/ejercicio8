@@ -1,0 +1,48 @@
+
+package com.mycompany.rt1901guia1array;
+
+import java.util.Scanner;
+
+public class ejercicio8 {
+      public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+
+        System.out.println("Introduce 8 números enteros:");
+        for (int i = 0; i < 8; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+       
+        System.out.println("Array antes de la inserción:");
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+
+      
+        System.out.print("Introduce el número a insertar: ");
+        int numeroAInsertar = scanner.nextInt();
+        System.out.print("Introduce la posición de inserción (0-9): ");
+        int posicion = scanner.nextInt();
+
+      
+        if (posicion < 0 || posicion > 9) {
+            System.out.println("La posición indicada no es válida.");
+        } else {
+           
+            for (int i = 8; i > posicion; i--) {
+                array[i] = array[i - 1];
+            }
+
+            array[posicion] = numeroAInsertar;
+
+            
+            System.out.println("Array después de la inserción:");
+            for (int num : array) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}  
